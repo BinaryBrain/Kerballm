@@ -1,9 +1,18 @@
 {
   "parts": [
-    "solidBooster.sm.v2",
+    "heatShield3",
+    "parachuteRadial",
     "mk1pod.v2",
-    "AdvancedCanard",
-    "turboFanSize2",
-    "smallCargoContainer"
+    "decoupler_0",
+    "liquidEngineMini_v2",
+    "smallTank",
+    "decoupler_1",
+    "liquidEngine_v2",
+    "LargeTank",
+    "decoupler_2",
+    "liquidEngineMainsail_v2",
+    "Rockomax64_BW",
+    "solidBooster.sm.v2",
+    "solidBooster.sm.v2"
   ]
 }
