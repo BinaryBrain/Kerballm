@@ -1,0 +1,26 @@
+PART
+{
+	part = mk2DockingPort
+	partName = Part
+	persistentId = 2264731800
+	pos = 0,13.8374624,0
+	attPos = 0,0,0
+	attPos0 = 0,-1.16253757,0
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 0
+	sidx = 0
+	sqor = 1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+}
