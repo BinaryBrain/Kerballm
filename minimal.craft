@@ -1,0 +1,66 @@
+ship = AAAAAAAAAAAA06
+version = 1.12.0
+description = AAAAAAAAAAAA06
+type = VAB
+size = 2.05977368,3.10723305,1.80648184
+steamPublishedFileId = 0
+persistentId = 133706
+rot = 0,0,0,1
+missionFlag = Squad/Flags/default
+vesselType = Debris
+PART
+{
+	part = mk1pod.v2_4294466236
+	partName = Part
+	persistentId = 1682334687
+	pos = 0,15,0
+	attPos = 0,0,0
+	attPos0 = 0,15,0
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = solidBooster.sm.v2_4294392496
+	attN = bottom,solidBooster.sm.v2_4294392496_0|-0.4050379|0
+	attN = top,parachuteSingle_4294458546_0|0.6423756|0
+}
+PART
+{
+	part = solidBooster.sm.v2_4294392496
+	partName = Part
+	persistentId = 2264731800
+	pos = 0,13.8374624,0
+	attPos = 0,0,0
+	attPos0 = 0,-1.16253757,0
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 0
+	sidx = 0
+	sqor = 1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	attN = top,mk1pod.v2_4294466236_0|0.7575|0
+}
