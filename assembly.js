@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const partFolder = 'parts';
+const partFolder = `${__dirname}/parts`;
 const outputFolder = '/Users/pierre/Library/Application Support/Steam/steamapps/common/Kerbal Space Program/Ships/VAB';
 
 const id = (new Date()).toISOString().replace(/[-:.ZTA-Z]/g, '');
@@ -34,6 +34,8 @@ for (let i = 0; i < json.parts.length; i++) {
   for (let j = 0; j < lines.length; j++) {
     if (matchStart(lines[j], 'part = ')) {
       newLines.push(`	part = ${partUUID}`);
+} else if (matchStart(lines[j], 'pos = ')) {
+      newLines.push(`	pos = 0,${i*2},0`);
     } else if (matchStart(lines[j], '}')) {
       // Add lines
       if (previousPartUUID) {

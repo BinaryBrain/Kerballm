@@ -1,0 +1,23 @@
+
+{
+  "parts": [
+    "Clydesdale",
+    "liquidEngineMainsail_v2",
+    "Rockomax64_BW",
+    "Decoupler_2",
+    "liquidEngine2_v2",
+    "Rockomax32_BW",
+    "Decoupler_1",
+    "liquidEngineMini_v2",
+    "SmallTank",
+    "mk1pod.v2",
+    "landingLeg1-2",
+    "liquidEngine2_v2",
+    "Rockomax16_BW",
+    "HeatShield1",
+    "parachuteLarge",
+    "solarPanels1",
+    "CommDish",
+    "science_module"
+  ]
+}

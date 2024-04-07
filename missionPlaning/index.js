@@ -1,10 +1,11 @@
 const express = require('express');
 
-
+  const fs = require('fs');
 
 const { Settings, OpenAIAgent, OpenAI} = require("llamaindex");
 
 const app = express();
+const exec = require('child_process').exec;
 
 app.use(express.json());
 app.use(express.static('public'));
@@ -94,10 +95,12 @@ Mite			adapterLargeSmallQuad	evaJetpack		liquidEngine2		mk3FuselageLF_25	roverWh
   // extract the content between the "```" code blocks in response.response and stroe it in part variable
   let part = response.response.match(/```([^`]*)```/g);
   console.log(part);
-  const fs = require('fs');
-  fs.writeFileSync('../example.json', part, 'utf8');
+
+  fs.writeFileSync(`${__dirname}/example.json`, part[0].replace('```json', '')
+    .replace('```', '')
+    .replace('```', '')
+, 'utf8');
   
-  const exec = require('child_process').exec;
   exec('node ../assembly.js', (error, stdout, stderr) => { 
 
     console.log(error);
