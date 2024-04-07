@@ -1,6 +1,9 @@
 {
   "parts": [
     "solidBooster.sm.v2",
-    "mk1pod.v2"
+    "mk1pod.v2",
+    "AdvancedCanard",
+    "turboFanSize2",
+    "smallCargoContainer"
   ]
 }
