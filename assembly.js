@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 const partFolder = 'parts';
-const outputFolder = '/Users/a799qw/Library/Application Support/Steam/steamapps/common/Kerbal Space Program/Ships/VAB';
+const outputFolder = '/Users/pierre/Library/Application Support/Steam/steamapps/common/Kerbal Space Program/Ships/VAB';
 
 const id = (new Date()).toISOString().replace(/[-:.ZTA-Z]/g, '');
 let output = `ship = AAA GEN ${id}

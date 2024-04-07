@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission Planing</title>
+
+    <style>
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;}
+
+    .prompt {
+        font-size: 1.5em;
+        font-family: monospace;
+        padding: 10px;
+        border: 1px solid #ccc;
+        margin: auto;
+        width: 80%;
+        margin-top: 20px;
+        border-radius: 2px;
+    }
+
+    #goBtn {
+        font-size: 1.5em;
+        padding: 20px;
+        border: 1px solid #ccc;
+        margin: auto;
+        width: 80%;
+        margin-top: 5px;
+        background-color: #424242;
+        color: #fff;
+        display: block;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+
+    .editable {
+        background-color: #fff;
+    }
+
+    .loader {
+        color: #424242;
+        font-size: 1em;
+        padding: 20px;
+        margin: auto;
+        width: 80%;
+        margin-top: 5px;
+        display: block;
+        border-radius: 2px;
+        text-align: left;
+        white-space: pre-wrap;
+    }
+    </style>
+</head>
+<body>
+   
+    <div id="start" contenteditable="true" class="prompt editable">
+        Build a rocket to go to the mun
+    </div>
+
+    <input id="goBtn" type="button" value="Ship it ! 🚀" onclick="go()">
+
+    <script> 
+        const userId = Math.floor(Math.random() * 100000) + '_id';
+        async function go() {
+            document.body.removeChild(document.getElementById("goBtn"));
+            start.setAttribute("contenteditable", "false");
+            start.classList.remove("editable");
+
+            let loader = document.createElement("pre");
+            loader.innerText = "Loading...";
+            loader.className = "loader";
+            document.body.appendChild(loader);
+
+            let response = await fetch("/mission", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    userId:userId,
+                    message: start.innerText.trim()
+                })
+            });
+
+            // append response text to body
+            let result = await response.json();
+
+            loader.innerText = result.response;
+
+        }
+    </script>
+
+
+
+</body>
