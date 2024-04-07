@@ -1,0 +1,12 @@
+
+{
+  "parts": [
+    "Clydesdale", "Clydesdale", "Clydesdale", "Clydesdale",
+    "Rockomax64_BW", "liquidEngineMainsail_v2",
+    "Rockomax32_BW", "nuclearEngine",
+    "Size3LargeTank", "nuclearEngine",
+    "SmallTank", "liquidEngine2_v2",
+    "mk1pod.v2", "HeatShield3", "parachuteLarge",
+    "solarPanelOX10L", "HighGainAntenna"
+  ]
+}

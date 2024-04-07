@@ -26,7 +26,12 @@ for (let i = 0; i < json.parts.length; i++) {
   const partName = json.parts[i];
   const partPath = `${partFolder}/${partName}`;
   const partUUID = `${partName}_${partId}`;
-  const partContent = fs.readFileSync(partPath, 'utf8');
+
+  if (!fs.existsSync(partPath)) { 
+    continue;
+  }
+  let partContent = fs.readFileSync(partPath, 'utf8');
+
 
   let lines = partContent.split('\n');
   let newLines = [];

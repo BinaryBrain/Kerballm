@@ -96,7 +96,7 @@ Mite			adapterLargeSmallQuad	evaJetpack		liquidEngine2		mk3FuselageLF_25	roverWh
   let part = response.response.match(/```([^`]*)```/g);
   console.log(part);
 
-  fs.writeFileSync(`${__dirname}/example.json`, part[0].replace('```json', '')
+  fs.writeFileSync(`${__dirname}/examples.json`, part[0].replace('```json', '')
     .replace('```', '')
     .replace('```', '')
 , 'utf8');
